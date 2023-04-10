@@ -7,8 +7,9 @@ import { useNavigate } from 'react-router-dom';
 const ProductDisplay = () => {
   const navigate = useNavigate();
   const onToken = (token)=>{
-    console.log(token)
-    navigate('/')
+    // console.log(token)
+    navigate('/confirmed')
+    
    }
   
  return (
@@ -18,12 +19,15 @@ const ProductDisplay = () => {
       return showFlightById.map(({ details }) => {
         return (
           <>
-          <div>
-            <img src={details.img} className ="w-[200px]"/>
-            <p>{details.name}</p>
-            <p>{details.price}</p>
+          <div className="container mx-auto w-5/6 text-center mt-12">
+            <div className="w-3/6 mx-auto">
+            <img src={details.img} className ="w-[500px] rounded-lg "/>
+            </div>
+          
+            <p className="text-[24px] font-bold leading-[30px] pt-3">{details.name}</p>
+            <p  className="text[32px] font-bold leading-[39px] text-[#FF8682] pt-2">${details.price}</p>
           </div>
-          <section>
+          <section className="w-5/6 container mx-auto text-center">
           
            <StripeCheckout
               name={details.name}

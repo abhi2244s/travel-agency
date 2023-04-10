@@ -54,6 +54,7 @@ const FlightInput = (props) => {
                 onChange={handleInputChange}
                 name="where"
                 label="where"
+                required
                 
               />
               <img
@@ -70,6 +71,7 @@ const FlightInput = (props) => {
                 onChange={handleInputChange}
                 name="from"
                 label="from"
+                required
               />
               <input
                 type="date"
@@ -79,6 +81,7 @@ const FlightInput = (props) => {
                 onChange={handleInputChange}
                 name="date"
                 label="date"
+                required
               />
 
               <button

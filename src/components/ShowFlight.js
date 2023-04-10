@@ -19,18 +19,18 @@ const ShowFlight = () => {
         console.log(showFlights);
         return showFlights.map(
           ({ price, from, where, id, details, flightLogo, time } = {}) => (
-            <div className="border border-black border-solid container mx-auto w-5/6 m-5">
+            <div className="border border-[#8DD3BB] border-solid container mx-auto w-5/6 m-5 rounded-lg mt-12">
              
               <div className="flex justify-between items-center">
                 <div>
                   <img src={flightLogo} />
                 </div>
                 <div className="m-5">
-                  <p>{time}</p>
-                  <p className="mt-3">{price}Rs</p>
+                  <p className="text-[16px] font-bold leading-[20px]">{time}</p>
+                  <p className="text[32px] font-bold leading-[39px] text-[#FF8682] mt-3">${price}</p>
                   <div className="mt-3">
-                    <span>{where} - </span>
-                    <span>{from}</span>
+                    <span className="text-[14px] font-bold leading-[20px]">{where} - </span>
+                    <span className="text-[14px] font-bold leading-[20px]">{from}</span>
                   </div>
                 </div>
               </div>

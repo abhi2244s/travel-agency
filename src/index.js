@@ -17,10 +17,13 @@ import BookFlight from "./components/BookFlight";
 import Payment from "./components/Payment";
 import App from "./components/ProductDisplay";
 import ProductDisplay from "./components/ProductDisplay";
+import Confirmation from "./components/Confirmation";
+import Dashboard from "./components/Dashboard";
 
 const AppLayout = () => {
   const [showFlights, setShowFlights] = useState({});
   const [showFlightById, setShowFlightById] = useState({});
+
 
   const filterFlight = (values) => {
     // if(!values === " "){
@@ -94,7 +97,16 @@ const appRouter = createBrowserRouter([
       {
         path : '/checkout',
         element : <ProductDisplay/>
-      }
+      },
+      {
+        path : '/confirmed',
+        element : <Confirmation/>
+      },
+      {
+        path : '/dashboard',
+        element : <Dashboard/>
+      },
+
     ],
   },
 ]);

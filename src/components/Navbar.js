@@ -13,6 +13,7 @@ const Navbar = () => {
   const { loginWithRedirect } = useAuth0();
   const { logout } = useAuth0();
   const { isAuthenticated, user } = useAuth0();
+ 
 
   return (
     <>
@@ -40,8 +41,10 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="md:flex hidden space-x-6 ">
-          <span>{isAuthenticated && <p>{user.name}</p>}</span>
+          <span>{isAuthenticated && <p className="pt-1">{user.name}</p>}</span>
           {isAuthenticated ? (
+            
+            <div>
             <button
               className="bg-[#112211] rounded p-2 px-3 text-white font-semibold leading-[17px] text-[14px]"
               onClick={() =>
@@ -50,6 +53,8 @@ const Navbar = () => {
             >
               Logout
             </button>
+            <button className="bg-[#112211] rounded p-2 px-3 text-white font-semibold leading-[17px] text-[14px] mx-2"><Link to = "/dashboard" >Dashboard</Link></button>
+            </div>
           ) : (
             <button
               className="font-semibold leading-[17px] text-[14px]"
@@ -57,6 +62,7 @@ const Navbar = () => {
             >
               Login
             </button>
+           
           )}
         </div>
       </div>
@@ -65,6 +71,7 @@ const Navbar = () => {
           <div className="flex md:hidden space-x-6 flex-col border border-white shadow-lg transition delay-150 duration-300 ease-in-out w-5/6 mx-auto p-5 rounded-lg">
             <span>{isAuthenticated && <p>{user.name}</p>}</span>
             {isAuthenticated ? (
+              <div>
               <button
                 className="bg-[#112211] rounded p-2 px-3 text-white font-semibold leading-[17px] text-[14px]"
                 onClick={() =>
@@ -73,6 +80,8 @@ const Navbar = () => {
               >
                 Logout
               </button>
+              <button className="bg-[#112211] rounded p-2 px-3 text-white font-semibold leading-[17px] text-[14px] mx-2"><Link to = "/dashboard">Dashboard</Link></button>
+              </div>
             ) : (
               <button
                 className="font-semibold leading-[17px] text-[14px]"
