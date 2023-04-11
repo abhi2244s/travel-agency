@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const ProductDisplay = () => {
   const navigate = useNavigate();
   const onToken = (token)=>{
-    // console.log(token)
+    console.log(token)
     navigate('/confirmed')
     
    }

@@ -21,7 +21,7 @@ const ShowFlight = () => {
           ({ price, from, where, id, details, flightLogo, time } = {}) => (
             <div className="border border-[#8DD3BB] border-solid container mx-auto w-5/6 m-5 rounded-lg mt-12">
              
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between  ">
                 <div>
                   <img src={flightLogo} />
                 </div>
@@ -41,7 +41,7 @@ const ShowFlight = () => {
             <li>{id}</li> */}
               <div className="text-center">
                 <button
-                  className="bg-[#8DD3BB]  rounded  m-5 p-3 px-3 text-black font-semibold leading-[17px] text-[14px] rounded w-[300px]"
+                  className="bg-[#8DD3BB]  rounded  m-5 p-3 px-3 text-black font-semibold leading-[17px] text-[14px] rounded md:w-[300px] w-auto]"
                   onClick={() => flightFilterById(id)}
                 >
                   <Link to={"/show/" + id} key={id}>

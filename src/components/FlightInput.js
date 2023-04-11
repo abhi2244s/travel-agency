@@ -41,11 +41,14 @@ const FlightInput = (props) => {
     <>
       <FlightContext.Consumer>
         {({ filterFlight, showFlights }) => (
+          <section>
+            <h2 className="text-[24px] font-bold leading-[30px] text-center pt-8">Please fill in input field :-</h2>
+            <p className="text-[15px] font-bold leading-[20px] text-center pt-5">Lucknow--Delhi--08/03/2023</p>
           <div className="flight-input-conatiner container mx-auto w-5/6  space-x-6 my-5 lg:h-[250px] h-auto md:mt-8 rounded-lg">
             <h1 className=" font-semibold text-[20px] leading-[24px] pt-12 w-5/6 mx-12">
               Where are you flying
             </h1>
-            <div className="pt-8   flex flex-wrap">
+            <div className="pt-8  flex flex-wrap">
               <input
                 type="text"
                 placeholder="Where from"
@@ -92,6 +95,7 @@ const FlightInput = (props) => {
               </button>
             </div>
           </div>
+          </section>
         )}
       </FlightContext.Consumer>
 

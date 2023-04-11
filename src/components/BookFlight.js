@@ -21,7 +21,7 @@ const BookFlight = () => {
         return showFlightById.map(({ details }) => {
           return (
             <div className="w-5/6 container mx-auto">
-              <div className="flex  justify-between">
+              <div className="flex  justify-between md:flex-row flex-col">
                 <div className="border border-[#FFFFFF] shadow-lg w-4/6 m-5 rounded-lg">
                   <div>
                     <img src={details.flightLogo} />

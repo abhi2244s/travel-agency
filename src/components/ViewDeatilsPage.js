@@ -21,7 +21,7 @@ const ViewDeatilsPage = () => {
                   <p className="text[32px] font-bold leading-[39px] text-[#FF8682]">${details.price}</p>
                 </div>
               </div>
-              <div className="flex justify-between mt-4">
+              <div className="flex justify-between mt-4 md:flex-row flex-col">
                 <div className="m-5 flex space-x-6">
                   <div className="w-[38px] h-[28px] rounded border border-[#8DD3BB] text-center">
                   <span>{details.rating} </span>
